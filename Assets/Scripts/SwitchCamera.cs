@@ -11,7 +11,7 @@ public class SwitchCamera : MonoBehaviour
     void Start()
     {
         uiManager.Disable("DiceUI");
-        uiManager.Disable("Health");
+        uiManager.Disable("Hearts");
         uiManager.Disable("Strength");
         uiManager.Disable("Gold");
         rb = GetComponent<Rigidbody>();
@@ -24,7 +24,7 @@ public class SwitchCamera : MonoBehaviour
             gameObject.SetActive(false);
             cam.SetActive(true);
             uiManager.Enable("DiceUI");
-            uiManager.Enable("Health");
+            uiManager.Enable("Hearts");
             uiManager.Enable("Strength");
             uiManager.Enable("Gold");
         }

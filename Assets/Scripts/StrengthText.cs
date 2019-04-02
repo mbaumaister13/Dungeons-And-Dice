@@ -11,6 +11,7 @@ public class StrengthText : MonoBehaviour
     {
         //strengthText = GameObject.Find("UI_Manager").transform.Find("Strength").gameObject.GetComponent<TextMeshPro>();
         strengthText = gameObject.GetComponent<TextMeshPro>();
+        DontDestroyOnLoad(strengthText);
     }
 
     // Update is called once per frame

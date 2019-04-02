@@ -24,7 +24,6 @@ public class Player : MonoBehaviour
 
     // Update is called once per frame
     void Start(){
-        HealthText = GameObject.Find("UI_Manager").transform.Find("Health").gameObject.GetComponent<Text>();
         StrengthText = GameObject.Find("UI_Manager").transform.Find("Strength").gameObject.GetComponent<Text>();
         GoldText = GameObject.Find("UI_Manager").transform.Find("Gold").gameObject.GetComponent<Text>();
         Physics.IgnoreCollision(GetComponent<Collider>(),dice.gameObject.GetComponent<Collider>());
@@ -33,10 +32,11 @@ public class Player : MonoBehaviour
         animator = GetComponent<Animator>();
         animator.SetInteger("animation",13);
         board = GameObject.Find("Board").GetComponent<Board>();
+
+        DontDestroyOnLoad(GameObject.Find("UI_Manager"));
     }
     void Update()
     {
-        HealthText.text = "Health: " + hp;
         StrengthText.text = "Strength: x" + strength;
         GoldText.text = "Gold: " + gold;
         if(playerCamera.gameObject.activeInHierarchy){
