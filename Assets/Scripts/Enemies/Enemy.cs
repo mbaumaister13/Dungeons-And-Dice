@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 public class Enemy : MonoBehaviour
 {
-    public PlayerController player;
+    protected PlayerController player;
     //string name;
     protected Rigidbody2D rb;
     protected int damage;

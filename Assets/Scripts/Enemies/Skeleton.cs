@@ -9,7 +9,6 @@ public class Skeleton : Enemy
     bool canAttack;
     float attackSpeed;
     float attackTimer;
-    
     // Start is called before the first frame update
     void Start()
     {
@@ -24,11 +23,6 @@ public class Skeleton : Enemy
     // Update is called once per frame
     public override void Update()
     {
-        //Debug.Log(Vector3.Distance(player.transform.position,transform.position));
-        if(Vector3.Distance(player.transform.position,transform.position) < 5){
-            transform.position += (player.transform.position-transform.position) * Time.deltaTime * moveSpeed;
-        }
-
         if(hp <= 0){
             Debug.Log("Skeleton died");
             Destroy(gameObject);
@@ -46,8 +40,8 @@ public class Skeleton : Enemy
     }
     [Task]
     public void seekPlayer(){
-        Vector2 targetDir = player.transform.position-rb.transform.position;
-        rb.transform.position = Vector2.MoveTowards(rb.transform.position,targetDir,moveSpeed*Time.fixedDeltaTime);
+        float dir = Mathf.Sign((player.transform.position-rb.transform.position).x);
+        rb.velocity = new Vector2(dir*moveSpeed*Time.fixedDeltaTime,rb.velocity.y);
         if(canAttack){
             Task.current.Succeed();
         }
