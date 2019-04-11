@@ -24,6 +24,16 @@ public class PlayerController : Player
 
     void Update(){
         horizontalMove = Input.GetAxisRaw("Horizontal");
+        if (Input.GetKeyDown("space")&&grounded){
+            rb.AddForce(new Vector2(0,jumpForce));
+        }
+        if(Input.GetMouseButtonDown(0)&&Time.time-attackTimer>=attackSpeed){
+            if(horizontalMove!=0){
+                wep.offset = new Vector2(wepOffset*horizontalMove,wep.offset.y);
+            }
+            animator.SetTrigger("isAttacking");
+            attackTimer = Time.time;
+        }
     }
     // Update is called once per frame
     void FixedUpdate()
@@ -43,16 +53,6 @@ public class PlayerController : Player
                 movingRight = false;
                 animator.SetBool("isFacingRight",false);
             }
-        }
-        if (Input.GetKeyDown("space")&&grounded){
-            rb.AddForce(new Vector2(0,jumpForce));
-        }
-        if(Input.GetMouseButtonDown(0)&&Time.time-attackTimer>=attackSpeed){
-            if(horizontalMove!=0){
-                wep.offset = new Vector2(wepOffset*horizontalMove,wep.offset.y);
-            }
-            animator.SetTrigger("isAttacking");
-            attackTimer = Time.time;
         }
         animator.SetBool("onGround",grounded);
         animator.SetFloat("Speed",Mathf.Abs(horizontalMove));

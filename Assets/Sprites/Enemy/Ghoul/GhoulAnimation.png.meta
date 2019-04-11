@@ -49,7 +49,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 500
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -102,7 +102,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 04d9c1957ca01a04da2fb3033f5b3c01
+      spriteID: 1b51d0e5a0b81d4418030a50a08a4c80
       vertices: []
       indices: 
       edges: []
@@ -122,7 +122,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 646b177622271a34c86d0747019cb116
+      spriteID: 894149c512f513341a7f6bc38e1045eb
       vertices: []
       indices: 
       edges: []
@@ -142,7 +142,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5bd76cbcb430472428c0ed244b814c86
+      spriteID: fd07f8cc82c14f049b8931c7f9caa62d
       vertices: []
       indices: 
       edges: []
@@ -151,7 +151,7 @@ TextureImporter:
       name: GhoulAnimation_3
       rect:
         serializedVersion: 2
-        x: 1497
+        x: 1500
         y: 0
         width: 481
         height: 500
@@ -162,7 +162,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a6ae919b6a46b2a43928d319e7804327
+      spriteID: 4b04516fb9c0a3c4190a20a948db47d2
       vertices: []
       indices: 
       edges: []

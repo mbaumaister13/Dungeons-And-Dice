@@ -6,18 +6,12 @@ using Panda;
 
 public class Skeleton : Enemy
 {
-    bool canAttack;
-    float attackSpeed;
-    float attackTimer;
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
         hp = 50f;
         damage = 5;
-        canAttack = true;
         attackSpeed = 3f;
-        attackTimer = 0;
     }
 
     // Update is called once per frame
@@ -28,16 +22,16 @@ public class Skeleton : Enemy
             Destroy(gameObject);
         }
     }
-    [Task]
-    public override void canSeePlayer(){
-        Vector2 targetDir = rb.transform.position - player.transform.position;
-        if(targetDir.magnitude <10){
-            Task.current.Succeed();
-        }
-        else{
-            Task.current.Fail();
-        }
-    }
+    // [Task]
+    // public override void canSeePlayer(){
+    //     Vector2 targetDir = rb.transform.position - player.transform.position;
+    //     if(targetDir.magnitude <10){
+    //         Task.current.Succeed();
+    //     }
+    //     else{
+    //         Task.current.Fail();
+    //     }
+    // }
     [Task]
     public void seekPlayer(){
         float dir = Mathf.Sign((player.transform.position-rb.transform.position).x);
