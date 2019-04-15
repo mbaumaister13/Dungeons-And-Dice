@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerController : Player
 {
@@ -13,6 +14,8 @@ public class PlayerController : Player
     Rigidbody2D rb;
     Animator animator;
     float horizontalMove = 0f, groundRadius = .2f, wepOffset;
+    //public MeterManager meterManager;
+    TextMeshProUGUI HealthText, StrengthText, GoldText;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,9 +23,15 @@ public class PlayerController : Player
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         wepOffset = wep.offset.x;
+        HealthText = meterManager.transform.Find("PlayerMeters").transform.Find("Health").gameObject.GetComponent<TextMeshProUGUI>(); 
+        StrengthText = meterManager.transform.Find("PlayerMeters").transform.Find("Strength").gameObject.GetComponent<TextMeshProUGUI>(); 
+        GoldText = meterManager.transform.Find("PlayerMeters").transform.Find("Gold").gameObject.GetComponent<TextMeshProUGUI>(); 
     }
 
     void Update(){
+        HealthText.SetText("Health: " + hp + " hp");
+        StrengthText.SetText("Strength: x" + strength);
+        GoldText.SetText("Gold: " + gold);
         horizontalMove = Input.GetAxisRaw("Horizontal");
         if (Input.GetKeyDown("space")&&grounded){
             rb.AddForce(new Vector2(0,jumpForce));
