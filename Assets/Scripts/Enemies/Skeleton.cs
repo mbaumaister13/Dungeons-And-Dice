@@ -15,23 +15,14 @@ public class Skeleton : Enemy
     }
 
     // Update is called once per frame
-    public override void Update()
+    public void Update()
     {
         if(hp <= 0){
             Debug.Log("Skeleton died");
             Destroy(gameObject);
         }
     }
-    // [Task]
-    // public override void canSeePlayer(){
-    //     Vector2 targetDir = rb.transform.position - player.transform.position;
-    //     if(targetDir.magnitude <10){
-    //         Task.current.Succeed();
-    //     }
-    //     else{
-    //         Task.current.Fail();
-    //     }
-    // }
+
     [Task]
     public void seekPlayer(){
         float dir = Mathf.Sign((player.transform.position-rb.transform.position).x);

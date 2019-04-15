@@ -5,5 +5,6 @@ public class CheckpointTile: Tile
     public override void execute(){
         Debug.Log("Activating Checkpoint Tile");
         checkpoint.transform.position = transform.position;
+        PlayerManager.instance.savedPlayer = PlayerManager.instance.player;
     }
 }

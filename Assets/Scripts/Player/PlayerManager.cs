@@ -12,5 +12,9 @@ public class PlayerManager: MonoBehaviour{
 
     #endregion
 
+    public void respawnPlayer(){
+        player = savedPlayer;
+    }
     public GameObject player;
+    public GameObject savedPlayer;
 }

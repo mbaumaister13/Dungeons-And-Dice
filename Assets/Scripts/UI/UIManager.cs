@@ -27,7 +27,9 @@ public class UIManager : MonoBehaviour
         if (Input.GetKeyDown("escape")) {
             GM.pause();
         }
-        setDifficulty(difficulty.captionText.text);
+        if(difficulty!=null){
+           setDifficulty(difficulty.captionText.text);
+        }
     }
 
     public void volumeUpdate(float vol) {

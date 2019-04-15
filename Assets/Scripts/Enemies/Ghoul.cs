@@ -13,7 +13,7 @@ public class Ghoul : Enemy
     }
 
     // Update is called once per frame
-    public override void Update()
+    public void Update()
     {
         rb.velocity = new Vector2(0,Mathf.Sin(Time.time*6));
     }
@@ -21,7 +21,7 @@ public class Ghoul : Enemy
 
     [Task]
     public void Swoop(){
-        
+
     }
     [Task]
     public override void attack(){

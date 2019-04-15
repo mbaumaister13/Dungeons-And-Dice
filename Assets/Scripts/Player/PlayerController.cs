@@ -49,6 +49,9 @@ public class PlayerController : Player
         if(Time.time - invincibilityTimer >= invincibilityTime){
             isInvincible = false;
         }
+        if(hp<=0){
+            Respawn();
+        }
     }
     // Update is called once per frame
     void FixedUpdate()
@@ -93,5 +96,9 @@ public class PlayerController : Player
             Debug.Log(rb.velocity);            
             Debug.Log("Player took "+damage+" damage!");
         }
+    }
+    void Respawn(){
+        GameManager.unloadScene();
+        PlayerManager.instance.respawnPlayer();
     }
 }

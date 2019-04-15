@@ -35,8 +35,7 @@ public class Player : MonoBehaviour
         animator = GetComponent<Animator>();
         animator.SetInteger("animation",13);
         board = GameObject.Find("Board").GetComponent<Board>();
-
-        DontDestroyOnLoad(GameObject.Find("MeterManager"));
+        PlayerManager.instance.savedPlayer = PlayerManager.instance.player;
     }
     void Update()
     {

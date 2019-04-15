@@ -26,10 +26,6 @@ public class Enemy : MonoBehaviour
     }
 
     // Update is called once per frame
-    public virtual void Update()
-    {
-        
-    }
     public virtual void attack(){    }
     [Task]
     public virtual void canSeePlayer(){

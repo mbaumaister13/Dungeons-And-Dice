@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -19,12 +20,13 @@ public class GameManager : MonoBehaviour
             vendor.GetComponentInChildren<Canvas>().enabled = false;
         }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        Debug.Log(difficult);
+    public static IEnumerator unloadScene(){
+        yield return new WaitForEndOfFrame();
+        foreach(GameObject g in SceneManager.GetActiveScene().GetRootGameObjects()){
+            g.SetActive (false);
+        }
     }
+
 
     public void pause() {
         if (UI.GetComponentInChildren<Canvas>().enabled) {
