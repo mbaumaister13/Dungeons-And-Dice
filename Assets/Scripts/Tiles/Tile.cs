@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using TMPro;
 public class Tile : MonoBehaviour
 {
@@ -12,21 +13,33 @@ public class Tile : MonoBehaviour
     protected TextMeshPro tooltip;
     protected Player player;
     protected VendorManager vendor;
+    protected UIManager UI;
+    private Toggle toggleTooltip;
     void Start(){
         player = PlayerManager.instance.player.GetComponent<Player>();
         GameObject[] objs = SceneManager.GetActiveScene().GetRootGameObjects();
         foreach(GameObject g in objs) {
             if (g.name == "VendorManager") {
                 vendor = g.GetComponent<VendorManager>();
+            } else if (g.name == "UI_Manager") {
+                UI = g.GetComponent<UIManager>();
             }
         }
+        toggleTooltip = UI.GetComponentInChildren<Canvas>().transform.Find("Tooltip").gameObject.GetComponentInChildren<Toggle>();
         tooltip = gameObject.GetComponentInChildren<TextMeshPro>();
         tooltip.enabled = false;
     }
 
     void Update() {
-        if (Mathf.Abs(tileIndex - player.currentTile) < 3) {
+        if (toggleTooltip.isOn) {
+            toggleTooltip.GetComponentInChildren<Text>().text = "Enabled";
+        } else {
+            toggleTooltip.GetComponentInChildren<Text>().text = "Disabled";
+        }
+        if (Mathf.Abs(tileIndex - player.currentTile) < 3 && toggleTooltip.isOn) {
             tooltip.enabled = true;
+        } else {
+            tooltip.enabled = false;
         }
 
     }
