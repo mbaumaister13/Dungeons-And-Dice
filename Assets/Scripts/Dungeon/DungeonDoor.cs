@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class DungeonDoor : MonoBehaviour
 {   
-    //PlayerController player;
+    PlayerController player;
     void Start(){
-        //player = PlayerManager.instance.player.GetComponent<PlayerController>();
+        player = PlayerManager.instance.player.GetComponent<PlayerController>();
     }
     void OnTriggerEnter2D(Collider2D col){
         if(col.tag == "Player"){
@@ -15,7 +15,7 @@ public class DungeonDoor : MonoBehaviour
             foreach(GameObject g in SceneManager.GetSceneByName("BoardScene").GetRootGameObjects()){
                 g.SetActive (true);
             }
-            Player.gold += 10;
+            player.gold += 10;
         }
     }
 }

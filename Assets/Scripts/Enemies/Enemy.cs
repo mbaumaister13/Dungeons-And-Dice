@@ -34,7 +34,7 @@ public class Enemy : MonoBehaviour
     [Task]
     public virtual void canSeePlayer(){
         Vector2 targetDir = rb.transform.position - player.transform.position;
-        if(targetDir.magnitude <10){
+        if(targetDir.magnitude <5){
             Task.current.Succeed();
         }
         else{

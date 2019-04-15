@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
     Board board;
     public float boardMoveSpeed;
     public float attackSpeed = 1f, attackTimer = 1f; 
-    public static int hp = 100, gold = 0, damage = 10;
+    public int hp = 100, gold = 0, damage = 10;
     public static float strength = 1.0f;
     int currentTile = -1;
     public int spacesToMove = 0;

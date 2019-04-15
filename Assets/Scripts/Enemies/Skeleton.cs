@@ -10,7 +10,7 @@ public class Skeleton : Enemy
     void Start()
     {
         hp = 50f;
-        damage = 5;
+        damage = 15;
         attackSpeed = 3f;
     }
 
@@ -36,42 +36,31 @@ public class Skeleton : Enemy
     public void seekPlayer(){
         float dir = Mathf.Sign((player.transform.position-rb.transform.position).x);
         rb.velocity = new Vector2(dir*moveSpeed*Time.fixedDeltaTime,rb.velocity.y);
-        if(canAttack){
+        Task.current.Succeed();
+    }
+    [Task]
+    public override void canSeePlayer(){
+        Vector2 targetDir = rb.transform.position - player.transform.position;
+        if(targetDir.magnitude <5){
+            animator.SetBool("playerNear",true);
             Task.current.Succeed();
         }
         else{
+            animator.SetBool("playerNear",false);
             Task.current.Fail();
         }
     }
-    [Task]
-    public override void attack(){
-        attackTimer = Time.time;
-        canAttack = false;
-        player.takeDamage(damage);
-        Task.current.Succeed();
-    }
-    [Task]
-    public void print1(){
-        Debug.Log("Function 1 returning successful");
-        Task.current.Succeed();
-    }
-    [Task]
-    public void print2(){
-        Debug.Log("Function 2 returning failure");
-        Task.current.Fail();
-    }
-    [Task]
-    public void print3(){
-        Debug.Log("Function 3 returning successful");
-        Task.current.Succeed();
-    }
 
+    public override void attack(){
+        player.takeDamage(damage);
+    }
+   
     void OnCollisionEnter2D(Collision2D col){
-        if(col.gameObject.tag == "Player"){
-            if(Time.time-attackTimer>=attackSpeed){
-                canAttack = true;
-            }
-            Debug.Log("Player HIT");
+        if(col.gameObject.tag == "Player"&&canAttack){
+            attack();
+            canAttack = false;
+            animator.SetTrigger("explode");
+            Destroy(gameObject,0.5f);
         }
     }
 }
