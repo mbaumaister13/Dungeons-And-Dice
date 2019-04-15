@@ -46,6 +46,7 @@ public class Player : MonoBehaviour
             if(dice.value!=0&&spacesToMove==0){
                 spacesToMove = dice.value;
             }
+            Debug.Log(spacesToMove);
             if(spacesToMove!=0){
                 if(animator.GetInteger("animation")!=20){
                     animator.SetInteger("animation",20);
