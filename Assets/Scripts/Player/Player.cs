@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
     public float boardMoveSpeed;
     public float attackSpeed = 1f, attackTimer = 1f; 
     public int hp = 100, gold = 0, damage = 10;
-    public static float strength = 1.0f;
+    public float strength = 1.0f;
     int currentTile = -1;
     public int spacesToMove = 0;
     public Dice dice;
