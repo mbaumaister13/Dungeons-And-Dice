@@ -14,6 +14,6 @@ public class Tile : MonoBehaviour
     }
     public virtual void execute(){
         Debug.Log("Activiating Normal Tile");
-        player.gold += 5;
+        Player.gold += 5;
     }
 }

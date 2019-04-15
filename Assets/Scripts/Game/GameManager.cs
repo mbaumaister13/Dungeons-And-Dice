@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public static Player[] players;
     public static Dice dice;
     public UIManager UI;
+    public MeterManager meterManager;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,9 +25,11 @@ public class GameManager : MonoBehaviour
     public void pause() {
         if (UI.GetComponentInChildren<Canvas>().enabled) {
             UI.GetComponentInChildren<Canvas>().enabled = false;
+            Time.timeScale = 1.0f;
         }
         else {
             UI.GetComponentInChildren<Canvas>().enabled = true;
+            Time.timeScale = 0.0f;
         }
     }
 }

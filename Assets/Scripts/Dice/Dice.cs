@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-//Dice Roll script found from https://www.youtube.com/watch?v=JgbJZdXDNtg
 public class Dice : MonoBehaviour
 {
-    UIManager uiManager;
+    MeterManager meterManager;
     public Camera cam;
     Rigidbody rb;
     public bool hasLanded, thrown;
@@ -16,7 +15,7 @@ public class Dice : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        uiManager = GameObject.Find("UI_Manager").GetComponent<UIManager>();
+        meterManager = GameObject.Find("MeterManager").GetComponent<MeterManager>();
         throwPosition = transform.position;
         rb = GetComponent<Rigidbody>();
     }
@@ -32,7 +31,7 @@ public class Dice : MonoBehaviour
                 if(d.isOnBoard()){
                     value = d.sideValue;
                     hasLanded = true;
-                    uiManager.Enable("DiceUI");
+                    meterManager.Enable("DiceUI");
                 }
             }
         }
@@ -45,7 +44,7 @@ public class Dice : MonoBehaviour
             rb.AddForce(cam.transform.forward*500);
             rb.useGravity = true;
             thrown = true;
-            uiManager.Disable("DiceUI");
+            meterManager.Disable("DiceUI");
         }
         else if (!hasLanded && thrown && (Time.time - waitTime > 5)) {
             rb.AddForce(0, 1, 0, ForceMode.Impulse);

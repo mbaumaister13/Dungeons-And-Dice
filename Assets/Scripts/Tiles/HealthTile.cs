@@ -3,6 +3,6 @@ public class HealthTile: Tile
 {
     public override void execute(){
         Debug.Log("Activating Health Tile");       
-        player.hp += 50;
+        Player.hp += 50;
     }
 }

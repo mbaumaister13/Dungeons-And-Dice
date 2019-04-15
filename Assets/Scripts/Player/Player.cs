@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Player : MonoBehaviour
 {
@@ -12,19 +13,21 @@ public class Player : MonoBehaviour
     Board board;
     public float boardMoveSpeed;
     public float attackSpeed = 1f, attackTimer = 1f; 
-    public int hp = 100, gold = 0, damage = 10;
-    public float strength = 1.0f;
+    public static int hp = 100, gold = 0, damage = 10;
+    public static float strength = 1.0f;
     int currentTile = -1;
     public int spacesToMove = 0;
     public Dice dice;
     private Animator animator;
     bool isIdle;
-    public Text HealthText, StrengthText, GoldText;
+    public MeterManager meterManager;
+    TextMeshProUGUI HealthText, StrengthText, GoldText;
 
     // Update is called once per frame
     void Start(){
-        StrengthText = GameObject.Find("UI_Manager").transform.Find("Strength").gameObject.GetComponent<Text>();
-        GoldText = GameObject.Find("UI_Manager").transform.Find("Gold").gameObject.GetComponent<Text>();
+        HealthText = meterManager.transform.Find("PlayerMeters").transform.Find("Health").gameObject.GetComponent<TextMeshProUGUI>(); 
+        StrengthText = meterManager.transform.Find("PlayerMeters").transform.Find("Strength").gameObject.GetComponent<TextMeshProUGUI>(); 
+        GoldText = meterManager.transform.Find("PlayerMeters").transform.Find("Gold").gameObject.GetComponent<TextMeshProUGUI>(); 
         Physics.IgnoreCollision(GetComponent<Collider>(),dice.gameObject.GetComponent<Collider>());
         playerCamera = transform.GetChild(3).gameObject;
         initialCamPosition = playerCamera.transform.position;
@@ -32,12 +35,13 @@ public class Player : MonoBehaviour
         animator.SetInteger("animation",13);
         board = GameObject.Find("Board").GetComponent<Board>();
 
-        DontDestroyOnLoad(GameObject.Find("UI_Manager"));
+        DontDestroyOnLoad(GameObject.Find("MeterManager"));
     }
     void Update()
     {
-        StrengthText.text = "Strength: x" + strength;
-        GoldText.text = "Gold: " + gold;
+        HealthText.SetText("Health: " + hp + " hp");
+        StrengthText.SetText("Strength: x" + strength);
+        GoldText.SetText("Gold: " + gold);
         if(playerCamera.gameObject.activeInHierarchy){
             if(dice.value!=0&&spacesToMove==0){
                 spacesToMove = dice.value;

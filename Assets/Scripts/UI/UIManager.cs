@@ -4,15 +4,14 @@ using UnityEngine.UI;
 using UnityEngine;
 public class UIManager : MonoBehaviour
 {
-    protected PlayerController player;
+
     public GameManager GM;
     public MusicManager MM;
 
     private Slider volume;
 
     void Start(){
-        player = PlayerManager.instance.player.GetComponent<PlayerController>();
-        volume = GameObject.Find("Volume").GetComponent<Slider>();
+        volume = GameObject.Find("Pause Menu").transform.Find("Music Settings").transform.Find("Volume").gameObject.GetComponent<Slider>();
     }
 
     void Update() {
@@ -25,27 +24,10 @@ public class UIManager : MonoBehaviour
         MM.SetVolume(vol);
     }
 
-    public void toggleMusic(bool toggle) {
-        volume.interactable = toggle;
-        if (toggle == true) {
-            MM.SetVolume(volume.value);
-        } 
-        else {
-            MM.SetVolume(0f);
-        }
+    public void toggleMusic(bool isOn) {
+        volume.interactable = isOn;
+        MM.SetVolume(isOn ? volume.value : 0f);
+        Debug.Log("Music Enabled: " + isOn);
     }
-    public void Enable(string name){
-        foreach(Transform t in transform){
-            if(t.name == name){
-                t.gameObject.SetActive(true);
-            }
-        }
-    }
-    public void Disable(string name){
-        foreach(Transform t in transform){
-            if(t.name == name){
-                t.gameObject.SetActive(false);
-            }
-        }
-    }
+
 }

@@ -5,15 +5,15 @@ using UnityEngine;
 public class SwitchCamera : MonoBehaviour
 {
     Rigidbody rb;
-    public UIManager uiManager;
+    public MeterManager meterManager;
     public GameObject cam;
+    public Dice dice;
     // Start is called before the first frame update
     void Start()
     {
-        uiManager.Disable("DiceUI");
-        uiManager.Disable("Hearts");
-        uiManager.Disable("Strength");
-        uiManager.Disable("Gold");
+        meterManager.Disable("PlayerMeters");
+        meterManager.Disable("DiceUI");
+        //dice.gameObject.SetActive(false);
         rb = GetComponent<Rigidbody>();
     }
 
@@ -23,10 +23,9 @@ public class SwitchCamera : MonoBehaviour
         if(gameObject.activeInHierarchy && rb.IsSleeping()){
             gameObject.SetActive(false);
             cam.SetActive(true);
-            uiManager.Enable("DiceUI");
-            uiManager.Enable("Hearts");
-            uiManager.Enable("Strength");
-            uiManager.Enable("Gold");
+            meterManager.Enable("DiceUI");
+            meterManager.Enable("PlayerMeters");
+            //dice.gameObject.SetActive(true);
         }
     }
 }

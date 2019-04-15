@@ -31,7 +31,7 @@ public class MouseOrbitImproved : MonoBehaviour
         rb = GetComponent<Rigidbody>();
 
         // Make the rigid body not change rotation
-        if (rb.constraints != null)
+        if (!rb.constraints.Equals(RigidbodyConstraints.None))
         {
             rb.freezeRotation = true;
         }
