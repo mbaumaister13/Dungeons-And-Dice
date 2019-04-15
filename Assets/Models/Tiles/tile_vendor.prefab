@@ -95,6 +95,7 @@ MonoBehaviour:
   tileType: 
   tileIndex: 0
   hasVisited: 0
+  vendor: {fileID: 7055839251190050175, guid: 5288f2a117dc5cb43a4c9d095888b43d, type: 3}
 --- !u!1 &4372951040559832466
 GameObject:
   m_ObjectHideFlags: 0

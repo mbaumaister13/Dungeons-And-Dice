@@ -3,6 +3,6 @@ public class JackpotTile: Tile
 {
     public override void execute(){
         Debug.Log("Activating Jackpot Tile");
-        Player.gold += 100;
+        Player.gold += 50;
     }
 }
