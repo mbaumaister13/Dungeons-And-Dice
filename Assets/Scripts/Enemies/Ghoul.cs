@@ -19,7 +19,10 @@ public class Ghoul : Enemy
     }
 
 
-    
+    [Task]
+    public void Swoop(){
+        
+    }
     [Task]
     public override void attack(){
         attackTimer = Time.time;

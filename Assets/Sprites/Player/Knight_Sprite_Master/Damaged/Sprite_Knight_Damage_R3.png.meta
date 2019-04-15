@@ -1,8 +1,7 @@
 fileFormatVersion: 2
-guid: 0863ac0fef1928e438999dea3826b1f7
+guid: beef2fdadd4446a44a49e79ae8921688
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: jump0_0
+  fileIDToRecycleName: {}
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -83,31 +82,11 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: jump0_0
-      rect:
-        serializedVersion: 2
-        x: 7
-        y: 0
-        width: 98
-        height: 134
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dd6819df7560a104388d2a3f5964d8f7
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: e2e04d6e78b8a9740869d76a076a0a22
+    spriteID: 
     vertices: []
     indices: 
     edges: []

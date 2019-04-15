@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1146935309908161521}
   - component: {fileID: 398055367627880890}
   - component: {fileID: 2899797494026814214}
+  - component: {fileID: 181619683283128513}
   m_Layer: 0
   m_Name: Skeleton
   m_TagString: Untagged
@@ -115,8 +116,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 50
-  moveSpeed: 5
-  animator: {fileID: 0}
+  moveSpeed: 80
+  animator: {fileID: 2571293589045141812}
 --- !u!50 &398055367627880890
 Rigidbody2D:
   serializedVersion: 4
@@ -154,3 +155,25 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.81, y: 1}
   m_Direction: 0
+--- !u!114 &181619683283128513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5119193175941047731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17e43e7170fb45b4b81dcd16d0ff55d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scripts:
+  - {fileID: 4900000, guid: 0fe0600a5bce8a94a99656e770ef7c0a, type: 3}
+  autoReset: 1
+  tickOn: 0
+  sourceInfos:
+  - isFoldout: 1
+    breakPoints: 
+    breakPointStatuses: 
+    collapsedLines: 
+    btScript: 

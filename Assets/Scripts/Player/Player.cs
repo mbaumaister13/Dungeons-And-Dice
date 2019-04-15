@@ -12,10 +12,11 @@ public class Player : MonoBehaviour
     Vector3 initialCamPosition;
     Board board;
     public float boardMoveSpeed;
-    public float attackSpeed = 1f, attackTimer = 1f; 
+    public float attackSpeed = 1f, attackTimer = 1f, invincibilityTimer = 0f,invincibilityTime = 2f; 
+    public bool isInvincible = false;
     public int hp = 100, gold = 0, damage = 10;
-    public static float strength = 1.0f;
-    int currentTile = -1;
+    public float strength = 1.0f;
+    public int currentTile = -1;
     public int spacesToMove = 0;
     public Dice dice;
     private Animator animator;
@@ -46,7 +47,6 @@ public class Player : MonoBehaviour
             if(dice.value!=0&&spacesToMove==0){
                 spacesToMove = dice.value;
             }
-            Debug.Log(spacesToMove);
             if(spacesToMove!=0){
                 if(animator.GetInteger("animation")!=20){
                     animator.SetInteger("animation",20);
