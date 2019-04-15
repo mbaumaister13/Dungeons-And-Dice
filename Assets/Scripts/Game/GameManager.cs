@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     public static int numPlayers;
     public static Player[] players;
     public static Dice dice;
+    public static string difficult;
     public UIManager UI;
     public VendorManager vendor;
     public MeterManager meterManager;
@@ -22,6 +23,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(difficult);
     }
 
     public void pause() {
