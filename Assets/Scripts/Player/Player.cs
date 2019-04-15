@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
     public float attackSpeed = 1f, attackTimer = 1f; 
     public int hp = 100, gold = 0, damage = 10;
     public float strength = 1.0f;
-    int currentTile = -1;
+    public int currentTile = -1;
     public int spacesToMove = 0;
     public Dice dice;
     private Animator animator;
@@ -46,7 +46,6 @@ public class Player : MonoBehaviour
             if(dice.value!=0&&spacesToMove==0){
                 spacesToMove = dice.value;
             }
-            Debug.Log(spacesToMove);
             if(spacesToMove!=0){
                 if(animator.GetInteger("animation")!=20){
                     animator.SetInteger("animation",20);

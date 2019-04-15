@@ -8,10 +8,10 @@ public class VendorManager : MonoBehaviour
 
     Button h1, h2, h3, s1, s2, s3, exit;
     GameObject brokePanel;
-    PlayerController player;
+    Player player;
     void Start()
     {  
-        player = PlayerManager.instance.player.GetComponent<PlayerController>();
+        player = PlayerManager.instance.player.GetComponent<Player>();
         h1 = GetComponentInChildren<Canvas>().transform.Find("HealthCanvas").transform.Find("Option1Button").gameObject.GetComponent<Button>();
         h2 = GetComponentInChildren<Canvas>().transform.Find("HealthCanvas").transform.Find("Option2Button").gameObject.GetComponent<Button>();
         h3 = GetComponentInChildren<Canvas>().transform.Find("HealthCanvas").transform.Find("Option3Button").gameObject.GetComponent<Button>();

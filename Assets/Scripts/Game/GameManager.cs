@@ -15,7 +15,9 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         UI.GetComponentInChildren<Canvas>().enabled = false;
-        vendor.GetComponentInChildren<Canvas>().enabled = false;
+        if(vendor!=null) {
+            vendor.GetComponentInChildren<Canvas>().enabled = false;
+        }
 
     }
 
