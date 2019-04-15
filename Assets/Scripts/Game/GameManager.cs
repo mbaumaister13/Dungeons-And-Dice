@@ -4,17 +4,18 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public enum State {BAORD,DUNGEON,SHOP};
-    public static State gameState = State.BAORD;
     public static int numPlayers;
     public static Player[] players;
     public static Dice dice;
     public UIManager UI;
+    public VendorManager vendor;
     public MeterManager meterManager;
     // Start is called before the first frame update
     void Start()
     {
         UI.GetComponentInChildren<Canvas>().enabled = false;
+        vendor.GetComponentInChildren<Canvas>().enabled = false;
+
     }
 
     // Update is called once per frame
