@@ -639,6 +639,11 @@ PrefabInstance:
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: volumeUpdate
       objectReference: {fileID: 0}
+    - target: {fileID: 1135745530, guid: 68746eb98cb5ffd4fa64129cc6301258, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 90b61be9703cd4c6b80b889643c9acea,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68746eb98cb5ffd4fa64129cc6301258, type: 3}
 --- !u!224 &449672437 stripped
@@ -793,7 +798,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: b01e86434043ceb43aa218d99f57e7fc, type: 2}
   m_CullingMode: 0
@@ -3253,6 +3258,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1224029480865809935, guid: 296824ffecd5d014a9fd0cd362a57ca1,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 16e7f218ba8d4f748887ab6da986ef8d, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 296824ffecd5d014a9fd0cd362a57ca1, type: 3}
 --- !u!1 &1264377007
@@ -3313,7 +3323,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 90b61be9703cd4c6b80b889643c9acea, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3616,6 +3626,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 368213473, guid: 41f81f58efa263b4bb09c90f75741b6f, type: 3}
+      propertyPath: UI
+      value: 
+      objectReference: {fileID: 2044735506}
+    - target: {fileID: 368213473, guid: 41f81f58efa263b4bb09c90f75741b6f, type: 3}
+      propertyPath: meterManager
+      value: 
+      objectReference: {fileID: 1271326702}
+    - target: {fileID: 368213473, guid: 41f81f58efa263b4bb09c90f75741b6f, type: 3}
+      propertyPath: vendor
+      value: 
+      objectReference: {fileID: 7055839251190050175}
     - target: {fileID: 3569451040886061028, guid: 41f81f58efa263b4bb09c90f75741b6f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3676,18 +3698,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 426402901}
-    - target: {fileID: 368213473, guid: 41f81f58efa263b4bb09c90f75741b6f, type: 3}
-      propertyPath: UI
-      value: 
-      objectReference: {fileID: 2044735506}
-    - target: {fileID: 368213473, guid: 41f81f58efa263b4bb09c90f75741b6f, type: 3}
-      propertyPath: meterManager
-      value: 
-      objectReference: {fileID: 1271326702}
-    - target: {fileID: 368213473, guid: 41f81f58efa263b4bb09c90f75741b6f, type: 3}
-      propertyPath: vendor
-      value: 
-      objectReference: {fileID: 7055839251190050175}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41f81f58efa263b4bb09c90f75741b6f, type: 3}
 --- !u!114 &1675050064 stripped
@@ -6935,6 +6945,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_isInputParsingRequired
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8010600733918057705, guid: 7dd47bc7ab78bc34f9046eebceecdc8d,
+        type: 3}
+      propertyPath: m_DetailObjectDistance
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 8010600733918057705, guid: 7dd47bc7ab78bc34f9046eebceecdc8d,
+        type: 3}
+      propertyPath: m_TreeCrossFadeLength
+      value: 200
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7dd47bc7ab78bc34f9046eebceecdc8d, type: 3}
