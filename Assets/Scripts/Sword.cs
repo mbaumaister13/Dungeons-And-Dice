@@ -10,7 +10,7 @@ public class Sword : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D col){
         if(col.tag=="Enemy"){
-            col.GetComponent<Enemy>().hp -= player.damage;
+            col.GetComponent<Enemy>().takeDamage(player.damage);
         }
     }
 }

@@ -1,11 +1,12 @@
 fileFormatVersion: 2
-guid: 3f41188e29714ee4dbb35aaa1c746d49
+guid: 0e9462f884537f6478b30dc53b89f77d
 TextureImporter:
   fileIDToRecycleName:
-    21300000: FireballAnimation_0
-    21300002: FireballAnimation_1
-    21300004: FireballAnimation_2
-    2186277476908879412: ImportLogs
+    21300000: fire_ghoul_walk_enraged_0
+    21300002: fire_ghoul_walk_enraged_1
+    21300004: fire_ghoul_walk_enraged_2
+    21300006: fire_ghoul_walk_enraged_3
+    21300008: fire_ghoul_walk_enraged_4
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -49,7 +50,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 500
+  spritePixelsToUnits: 250
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -88,12 +89,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FireballAnimation_0
+      name: fire_ghoul_walk_enraged_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 40
         y: 0
-        width: 500
+        width: 388
         height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -102,18 +103,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9612801b695a023478f7203dc32844c1
+      spriteID: 41294f9e44fab5448a7d1c1675f86433
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FireballAnimation_1
+      name: fire_ghoul_walk_enraged_1
       rect:
         serializedVersion: 2
-        x: 582
+        x: 464
         y: 0
-        width: 542
+        width: 483
         height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -122,18 +123,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 684158cdf08e0e24190e0fc6a4e60601
+      spriteID: 9913936038de41046aa9902191d4f522
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FireballAnimation_2
+      name: fire_ghoul_walk_enraged_2
       rect:
         serializedVersion: 2
-        x: 1206
+        x: 1006
         y: 0
-        width: 544
+        width: 388
         height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -142,7 +143,47 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9352866e8a31d20488f677106c33e771
+      spriteID: fa00c67d0021334418f9be94312a421f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire_ghoul_walk_enraged_3
+      rect:
+        serializedVersion: 2
+        x: 1470
+        y: 0
+        width: 483
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ff66395d3de3e14db364ed1df90e0e2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire_ghoul_walk_enraged_4
+      rect:
+        serializedVersion: 2
+        x: 2012
+        y: 0
+        width: 388
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7887d12d5cad94b488d078ee75386ad3
       vertices: []
       indices: 
       edges: []
@@ -150,7 +191,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 81b83da76f69fd945afa45ce8edc4b38
+    spriteID: 8fa4fafde91bc0c41917a2c2aa912fed
     vertices: []
     indices: 
     edges: []

@@ -10,17 +10,8 @@ public class Skeleton : Enemy
     void Start()
     {
         hp = 50f;
-        damage = 150;
+        damage = 15;
         attackSpeed = 3f;
-    }
-
-    // Update is called once per frame
-    public void Update()
-    {
-        if(hp <= 0){
-            Debug.Log("Skeleton died");
-            Destroy(gameObject);
-        }
     }
 
     [Task]

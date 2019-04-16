@@ -1,10 +1,15 @@
 fileFormatVersion: 2
-guid: 69e3e64e31400eb409c583219bc41355
+guid: f5d55a4992be1d04393d24ebeb3cfe6b
 TextureImporter:
   fileIDToRecycleName:
-    21300000: FireballAnimation_0
-    21300002: FireballAnimation_1
-    21300004: FireballAnimation_2
+    21300000: FireGhoulWalk_0
+    21300002: FireGhoulWalk_1
+    21300004: FireGhoulWalk_2
+    21300006: FireGhoulWalk_3
+    21300008: FireGhoulWalk_4
+    21300010: FireGhoulWalk_5
+    21300012: FireGhoulWalk_6
+    21300014: FireGhoulWalk_7
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -48,7 +53,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 250
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -87,12 +92,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FireballAnimation_0
+      name: FireGhoulWalk_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 500
+        width: 387
         height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -101,18 +106,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a97549cfa1ab1984b9ba8ae825660240
+      spriteID: 4caa2f67b1f3d6f4f9932ab1f826578f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FireballAnimation_1
+      name: FireGhoulWalk_1
       rect:
         serializedVersion: 2
-        x: 582
+        x: 419
         y: 0
-        width: 542
+        width: 394
         height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -121,18 +126,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef2cbdc76e33a0049bcc91ac85ace374
+      spriteID: 09c465b43198d8645b5711932a9df60e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FireballAnimation_2
+      name: FireGhoulWalk_2
       rect:
         serializedVersion: 2
-        x: 1206
+        x: 850
         y: 0
-        width: 544
+        width: 388
         height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -141,7 +146,107 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e92c7539c0b40d04daa3385efba46e88
+      spriteID: fc1e1336bdd400e478b78bb30a0683a2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireGhoulWalk_3
+      rect:
+        serializedVersion: 2
+        x: 1286
+        y: 0
+        width: 390
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d6aa83d238685f41b120137afe6fdb7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireGhoulWalk_4
+      rect:
+        serializedVersion: 2
+        x: 1709
+        y: 0
+        width: 486
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd697b71715b0604493f518f7ef7308a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireGhoulWalk_5
+      rect:
+        serializedVersion: 2
+        x: 2252
+        y: 0
+        width: 389
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf4a8a8b1417b294aad5c9ba2fd0b92f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireGhoulWalk_6
+      rect:
+        serializedVersion: 2
+        x: 2716
+        y: 0
+        width: 486
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0f313ece15c9294cb08600d2f29794d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireGhoulWalk_7
+      rect:
+        serializedVersion: 2
+        x: 3259
+        y: 0
+        width: 511
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10fe27fdd84538b41b48b933f19892a4
       vertices: []
       indices: 
       edges: []
@@ -149,7 +254,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: ddcc26b26c9aeac4bbd2a26362516fe3
+    spriteID: dc6bb78134e056249a2d103dcc7c149f
     vertices: []
     indices: 
     edges: []

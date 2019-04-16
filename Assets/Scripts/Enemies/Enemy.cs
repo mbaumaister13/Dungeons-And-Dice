@@ -14,6 +14,8 @@ public class Enemy : MonoBehaviour
     protected float attackSpeed;
     protected float attackTimer;
     public Animator animator;
+    protected bool damaged = false;
+    protected float invicibilityTime = 1f, invincibilityTimer = 0f;
     // Start is called before the first frame update
     void Awake()
     {
@@ -24,7 +26,16 @@ public class Enemy : MonoBehaviour
         canAttack = true;
 
     }
-
+    // Update is called once per frame
+    public virtual void Update() {
+        if (hp <= 0) {
+            Debug.Log("died");
+            Destroy(gameObject,1f);
+        }
+        if (Time.time - invincibilityTimer >= invicibilityTime && damaged) {
+            damaged = false;
+        }
+    }
     // Update is called once per frame
     public virtual void attack(){    }
     [Task]
@@ -36,5 +47,24 @@ public class Enemy : MonoBehaviour
         else{
             Task.current.Fail();
         }
+    }
+    [Task]
+    public void isDamaged() {
+        if (damaged) {
+            Task.current.Succeed();
+        }
+        else {
+            Task.current.Fail();
+        }
+    }
+    public virtual void takeDamage(int d) {
+        hp -= d;
+        Debug.Log(rb.velocity);
+        Vector2 knockback = new Vector2(-rb.velocity.x*2, -rb.velocity.y);
+        rb.AddForce(knockback, ForceMode2D.Impulse);
+        invincibilityTimer = Time.time;
+        damaged = true;
+        Debug.Log(rb.velocity);
+        Debug.Log("DAMAGE");
     }
 }

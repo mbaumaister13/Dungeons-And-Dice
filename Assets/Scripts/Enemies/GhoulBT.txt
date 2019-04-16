@@ -1,3 +1,7 @@
 tree("Root")
-	sequence
-		canSeePlayer
+	while
+		not isDamaged
+		sequence
+			Patrol
+			canSeePlayer
+			Swoop

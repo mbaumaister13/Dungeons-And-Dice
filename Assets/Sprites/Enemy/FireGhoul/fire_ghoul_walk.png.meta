@@ -1,11 +1,10 @@
 fileFormatVersion: 2
-guid: 3f41188e29714ee4dbb35aaa1c746d49
+guid: b67bd69f894db8245ba200c6bbff6286
 TextureImporter:
   fileIDToRecycleName:
-    21300000: FireballAnimation_0
-    21300002: FireballAnimation_1
-    21300004: FireballAnimation_2
-    2186277476908879412: ImportLogs
+    21300000: fire_ghoul_walk_0
+    21300002: fire_ghoul_walk_1
+    21300004: fire_ghoul_walk_2
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -49,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 500
+  spritePixelsToUnits: 250
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -88,12 +87,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FireballAnimation_0
+      name: fire_ghoul_walk_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 500
+        width: 385
         height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -102,18 +101,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9612801b695a023478f7203dc32844c1
+      spriteID: 4a343f76815575749a43a3687e67ccda
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FireballAnimation_1
+      name: fire_ghoul_walk_1
       rect:
         serializedVersion: 2
-        x: 582
+        x: 425
         y: 0
-        width: 542
+        width: 385
         height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -122,18 +121,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 684158cdf08e0e24190e0fc6a4e60601
+      spriteID: 62fb177909599b548bf180af3cd6198a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FireballAnimation_2
+      name: fire_ghoul_walk_2
       rect:
         serializedVersion: 2
-        x: 1206
+        x: 851
         y: 0
-        width: 544
+        width: 385
         height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -142,7 +141,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9352866e8a31d20488f677106c33e771
+      spriteID: bfa5fe0cf4184bc428972e8e7e0060a0
       vertices: []
       indices: 
       edges: []
@@ -150,7 +149,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 81b83da76f69fd945afa45ce8edc4b38
+    spriteID: 1e82e08d57239f74d9274e74cf1988e4
     vertices: []
     indices: 
     edges: []
