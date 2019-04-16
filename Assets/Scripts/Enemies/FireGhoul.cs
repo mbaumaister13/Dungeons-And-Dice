@@ -13,6 +13,7 @@ public class FireGhoul : Enemy
         hp = 100f;
         damage = 5;
         attackSpeed = 2f;
+        moveSpeed = 10f;
     }
     public override void Update() {
         base.Update();
@@ -29,13 +30,16 @@ public class FireGhoul : Enemy
     }
     [Task]
     public override void attack() {
-        if (Time.time - attackTimer >= attackSpeed) {
+        if (Time.time - attackTimer >= attackSpeed && transform.childCount<5) {
             GameObject fireball = Instantiate(projectile, transform.position,transform.rotation);
             fireball.GetComponent<Rigidbody2D>().AddForce((player.transform.position - transform.position) * 30);
             attackTimer = Time.time;
+            Task.current.Succeed();
         }
-        Task.current.Succeed();
     }
 
+    IEnumerator wait() {
+        yield return new WaitForSecondsRealtime(3f);
+    }
 
 }

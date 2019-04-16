@@ -8181,9 +8181,11 @@ GameObject:
   m_Component:
   - component: {fileID: 6253482055320576574}
   - component: {fileID: 1611893632928327320}
+  - component: {fileID: 7193682142282093538}
   - component: {fileID: 2168198641815590019}
+  - component: {fileID: 6301606533915632900}
   m_Layer: 0
-  m_Name: New Sprite
+  m_Name: Door Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8251,6 +8253,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7193682142282093538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5700360640338418297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15f6843ffd0a9f84f9e5c4f3194a306b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!61 &2168198641815590019
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8277,3 +8291,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.0625, y: 1.1666666}
   m_EdgeRadius: 0
+--- !u!50 &6301606533915632900
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5700360640338418297}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

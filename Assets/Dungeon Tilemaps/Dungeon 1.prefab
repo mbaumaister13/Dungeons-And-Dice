@@ -14923,7 +14923,7 @@ GameObject:
   - component: {fileID: 1769646296}
   - component: {fileID: 1769646295}
   - component: {fileID: 1769646297}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Platforms
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15319,7 +15319,7 @@ GameObject:
   - component: {fileID: 2132952103}
   - component: {fileID: 2132952102}
   - component: {fileID: 2132952104}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}

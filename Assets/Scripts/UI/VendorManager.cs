@@ -29,6 +29,7 @@ public class VendorManager : MonoBehaviour
         s2.onClick.AddListener(buy25str);
         s3.onClick.AddListener(buy50str);
         exit.onClick.AddListener(close);
+        GameManager.vendor = this;
     }
 
     void close() {

@@ -14,13 +14,13 @@ public class PlayerController : Player
     bool movingRight = false, grounded = false;
     public LayerMask WhatIsGround;
     Rigidbody2D rb;
-    Animator animator;
     float horizontalMove = 0f, groundRadius = .2f, wepOffset;
     //public MeterManager meterManager;
-    TextMeshProUGUI HealthText, StrengthText, GoldText;
+    //TextMeshProUGUI HealthText, StrengthText, GoldText;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
+        PlayerManager.instance.player = gameObject;
         sr = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
@@ -36,16 +36,16 @@ public class PlayerController : Player
                 rb.transform.position = new Vector2(-6.27f, 2.83f);
                 break;
             case ("dungeon2"):
-                rb.transform.position = new Vector2(-115.6f, -1.28f);
+                rb.transform.position = new Vector2(115.6f, -1.28f);
                 break;
             case ("dungeon3"):
-                rb.transform.position = new Vector2(-211.63f, -1.81f);
+                rb.transform.position = new Vector2(211.63f, -1.81f);
                 break;
             case ("dungeon4"):
-                rb.transform.position = new Vector2(-308.14f, -1.08f);
+                rb.transform.position = new Vector2(308.14f, -1.08f);
                 break;
             case ("dungeon5"):
-                rb.transform.position = new Vector2(-415f, -6.87f);
+                rb.transform.position = new Vector2(415f, -6.87f);
                 break;
             default:
                 rb.transform.position = new Vector2(-6.27f, 2.83f);

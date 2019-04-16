@@ -11,11 +11,16 @@ public class DungeonDoor : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D col){
         if(col.tag == "Player"){
+            player.gold += 10;
             SceneManager.UnloadSceneAsync(2);
             foreach(GameObject g in SceneManager.GetSceneByName("BoardScene").GetRootGameObjects()){
                 g.SetActive (true);
+                if (g.name == "Player") {
+                    g.GetComponent<Player>().gold = player.gold;
+                    g.GetComponent<Player>().hp = player.hp;
+                    PlayerManager.instance.player = g;
+                }
             }
-            player.gold += 10;
         }
     }
 }

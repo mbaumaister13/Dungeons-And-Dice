@@ -9,6 +9,7 @@ public class Ghoul : Enemy
         hp = 20f;
         damage = 5;
         attackSpeed = 3f;
+        moveSpeed = 10f;
         patrolStart = transform.position;
     }
 

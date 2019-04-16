@@ -24,5 +24,4 @@ public class PlayerManager: MonoBehaviour{
     //    savedPlayer = p.gameObject;
     //}
     public GameObject player;
-    public GameObject savedPlayer;
 }

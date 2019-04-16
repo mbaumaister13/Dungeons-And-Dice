@@ -12,13 +12,16 @@ public class GameManager : MonoBehaviour
     public static Player[] players;
     public static Dice dice;
     public static string difficult;
-    public UIManager UI;
-    public VendorManager vendor;
-    public MeterManager meterManager;
+    public static UIManager UI;
+    public static VendorManager vendor;
+    public static MeterManager meterManager;
     protected TextMeshProUGUI winText;
     // Start is called before the first frame update
     void Start()
     {
+        //UI = GameObject.Find("UI_Manager").GetComponent<UIManager>();
+        //meterManager= GameObject.Find("MeterManager").GetComponent<MeterManager>();
+        //vendor = GameObject.Find("VendorManager").GetComponent<VendorManager>();
         UI.GetComponentInChildren<Canvas>().enabled = false;
         if(vendor!=null){
             vendor.GetComponentInChildren<Canvas>().enabled = false;
@@ -27,6 +30,7 @@ public class GameManager : MonoBehaviour
             winText = meterManager.transform.Find("PlayerMeters").transform.Find("WinText").gameObject.GetComponent<TextMeshProUGUI>();
             winText.enabled = false; 
         }
+        DontDestroyOnLoad(this);
     }
     public static IEnumerator unloadScene(){
         yield return new WaitForEndOfFrame();
@@ -36,7 +40,7 @@ public class GameManager : MonoBehaviour
     }
 
 
-    public void pause() {
+    public static void pause() {
         if (UI.GetComponentInChildren<Canvas>().enabled) {
             UI.GetComponentInChildren<Canvas>().enabled = false;
             Time.timeScale = 1.0f;

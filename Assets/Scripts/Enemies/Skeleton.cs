@@ -12,6 +12,7 @@ public class Skeleton : Enemy
         hp = 50f;
         damage = 15;
         attackSpeed = 3f;
+        moveSpeed = 80f;
     }
 
     [Task]

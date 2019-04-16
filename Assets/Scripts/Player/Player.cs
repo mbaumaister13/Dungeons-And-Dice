@@ -21,24 +21,28 @@ public class Player : MonoBehaviour
     public int currentTile = -1;
     public int spacesToMove = 0;
     public Dice dice;
-    private Animator animator;
+    protected Animator animator;
     bool isIdle;
     public MeterManager meterManager;
     public int dungeonCount = 0;
-    TextMeshProUGUI HealthText, StrengthText, GoldText;
+    protected TextMeshProUGUI HealthText, StrengthText, GoldText;
+    static Player instance = null;
 
     // Update is called once per frame
     void Start(){
-        HealthText = meterManager.transform.Find("PlayerMeters").transform.Find("Health").gameObject.GetComponent<TextMeshProUGUI>(); 
-        StrengthText = meterManager.transform.Find("PlayerMeters").transform.Find("Strength").gameObject.GetComponent<TextMeshProUGUI>(); 
-        GoldText = meterManager.transform.Find("PlayerMeters").transform.Find("Gold").gameObject.GetComponent<TextMeshProUGUI>(); 
-        Physics.IgnoreCollision(GetComponent<Collider>(),dice.gameObject.GetComponent<Collider>());
-        playerCamera = transform.GetChild(3).gameObject;
-        initialCamPosition = playerCamera.transform.position;
-        animator = GetComponent<Animator>();
-        animator.SetInteger("animation",13);
-        board = GameObject.Find("Board").GetComponent<Board>();
-        //PlayerManager.instance.savePlayer(PlayerManager.instance.player.GetComponent<Player>());
+        if (instance == null) {
+            HealthText = meterManager.transform.Find("PlayerMeters").transform.Find("Health").gameObject.GetComponent<TextMeshProUGUI>();
+            StrengthText = meterManager.transform.Find("PlayerMeters").transform.Find("Strength").gameObject.GetComponent<TextMeshProUGUI>();
+            GoldText = meterManager.transform.Find("PlayerMeters").transform.Find("Gold").gameObject.GetComponent<TextMeshProUGUI>();
+            Physics.IgnoreCollision(GetComponent<Collider>(), dice.gameObject.GetComponent<Collider>());
+            playerCamera = transform.GetChild(3).gameObject;
+            initialCamPosition = playerCamera.transform.position;
+            animator = GetComponent<Animator>();
+            animator.SetInteger("animation", 13);
+            board = GameObject.Find("Board").GetComponent<Board>();
+            //PlayerManager.instance.savePlayer(PlayerManager.instance.player.GetComponent<Player>());
+            instance = this;
+        }
     }
     void Update()
     {

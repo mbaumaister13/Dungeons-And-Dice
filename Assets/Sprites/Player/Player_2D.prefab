@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: 2352903940105742154}
   m_Layer: 10
   m_Name: Player_2D
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -190,12 +190,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25c1f6306cd965a4483b9b365fa9147c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boardMoveSpeed: 0
+  attackSpeed: 1
+  attackTimer: 1
+  invincibilityTimer: 0
+  invincibilityTime: 0.3
+  isInvincible: 0
+  hp: 100
+  gold: 0
+  damage: 10
+  strength: 1
+  currentTile: -1
+  spacesToMove: 0
+  dice: {fileID: 0}
+  meterManager: {fileID: 0}
+  dungeonCount: 0
   groundCheck: {fileID: 37757845023640827}
+  wep: {fileID: 0}
   moveSpeed: 0
   jumpForce: 0
   WhatIsGround:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 256
 --- !u!50 &2352903940105742154
 Rigidbody2D:
   serializedVersion: 4

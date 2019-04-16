@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class UIManager : MonoBehaviour
 {
 
-    public GameManager GM;
     public MusicManager MM;
 
     private Slider volume;
@@ -19,6 +18,7 @@ public class UIManager : MonoBehaviour
         }
         quit = GameObject.Find("Pause Menu").transform.Find("QuitButton").gameObject.GetComponent<Button>();
         quit.onClick.AddListener(quitGame);
+        GameManager.UI = this;
     }
 
     void quitGame() {
@@ -29,7 +29,7 @@ public class UIManager : MonoBehaviour
     }
     void Update() {
         if (Input.GetKeyDown("escape")) {
-            GM.pause();
+            GameManager.pause();
         }
         if(difficulty!=null){
            setDifficulty(difficulty.captionText.text);

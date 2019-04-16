@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class MeterManager : MonoBehaviour
 {
+    private void Start() {
+        GameManager.meterManager = this;
+    }
 
     public void Enable(string name){
         foreach(Transform t in transform){
