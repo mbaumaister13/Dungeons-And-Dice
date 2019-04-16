@@ -7,6 +7,7 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
+    public static string dungeonState;
     public static int numPlayers;
     public static Player[] players;
     public static Dice dice;
@@ -26,7 +27,6 @@ public class GameManager : MonoBehaviour
             winText = meterManager.transform.Find("PlayerMeters").transform.Find("WinText").gameObject.GetComponent<TextMeshProUGUI>();
             winText.enabled = false; 
         }
-        
     }
     public static IEnumerator unloadScene(){
         yield return new WaitForEndOfFrame();

@@ -5,7 +5,8 @@ using TMPro;
 using UnityEngine.SceneManagement;
 
 public class PlayerController : Player
-{
+{   
+
     SpriteRenderer sr;
     public Transform groundCheck;
     public BoxCollider2D wep;
@@ -27,6 +28,29 @@ public class PlayerController : Player
         HealthText = meterManager.transform.Find("PlayerMeters").transform.Find("Health").gameObject.GetComponent<TextMeshProUGUI>(); 
         StrengthText = meterManager.transform.Find("PlayerMeters").transform.Find("Strength").gameObject.GetComponent<TextMeshProUGUI>(); 
         GoldText = meterManager.transform.Find("PlayerMeters").transform.Find("Gold").gameObject.GetComponent<TextMeshProUGUI>(); 
+        switch(GameManager.dungeonState) {
+            case ("miniboss"):
+                rb.transform.position = new Vector2(-6.27f, 41.790f);
+                break;
+            case ("dungeon1"):
+                rb.transform.position = new Vector2(-6.27f, 2.83f);
+                break;
+            case ("dungeon2"):
+                rb.transform.position = new Vector2(-115.6f, -1.28f);
+                break;
+            case ("dungeon3"):
+                rb.transform.position = new Vector2(-211.63f, -1.81f);
+                break;
+            case ("dungeon4"):
+                rb.transform.position = new Vector2(-308.14f, -1.08f);
+                break;
+            case ("dungeon5"):
+                rb.transform.position = new Vector2(-415f, -6.87f);
+                break;
+            default:
+                rb.transform.position = new Vector2(-6.27f, 2.83f);
+                break;
+        }
     }
 
     void Update(){
