@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Board : MonoBehaviour
 {
-    public static int maxTiles = 48;
+    public static int maxTiles = 49;
     public Tile[] tiles;
     // Start is called before the first frame update
     void Start()

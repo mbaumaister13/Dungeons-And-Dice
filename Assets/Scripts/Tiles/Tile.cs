@@ -14,7 +14,9 @@ public class Tile : MonoBehaviour
     protected Player player;
     protected VendorManager vendor;
     protected UIManager UI;
+    protected MeterManager meterManager;
     private Toggle toggleTooltip;
+    protected TextMeshProUGUI winText;
     void Start(){
         player = PlayerManager.instance.player.GetComponent<Player>();
         GameObject[] objs = SceneManager.GetActiveScene().GetRootGameObjects();
@@ -23,20 +25,27 @@ public class Tile : MonoBehaviour
                 vendor = g.GetComponent<VendorManager>();
             } else if (g.name == "UI_Manager") {
                 UI = g.GetComponent<UIManager>();
+            } else if (g.name == "MeterManager") {
+                meterManager = g.GetComponent<MeterManager>();
             }
         }
-        toggleTooltip = UI.GetComponentInChildren<Canvas>().transform.Find("Tooltip").gameObject.GetComponentInChildren<Toggle>();
+        if(UI != null) {
+            toggleTooltip = UI.GetComponentInChildren<Canvas>().transform.Find("Tooltip").gameObject.GetComponentInChildren<Toggle>();
+        }
+        if (meterManager != null) {
+            winText = meterManager.transform.Find("PlayerMeters").transform.Find("WinText").gameObject.GetComponent<TextMeshProUGUI>();
+        }
         tooltip = gameObject.GetComponentInChildren<TextMeshPro>();
         tooltip.enabled = false;
     }
 
     void Update() {
-        if (toggleTooltip.isOn) {
+        if (toggleTooltip.isOn && toggleTooltip != null) {
             toggleTooltip.GetComponentInChildren<Text>().text = "Enabled";
-        } else {
+        } else if (!toggleTooltip.isOn && toggleTooltip != null) {
             toggleTooltip.GetComponentInChildren<Text>().text = "Disabled";
         }
-        if (Mathf.Abs(tileIndex - player.currentTile) < 3 && toggleTooltip.isOn) {
+        if (Mathf.Abs(tileIndex - player.currentTile) < 3 && toggleTooltip.isOn && toggleTooltip != null) {
             tooltip.enabled = true;
         } else {
             tooltip.enabled = false;

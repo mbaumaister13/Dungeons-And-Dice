@@ -11,15 +11,19 @@ public class UIManager : MonoBehaviour
 
     private Slider volume;
     private Dropdown difficulty;
-
+    private Button quit;
     void Start() {
         volume = GameObject.Find("Pause Menu").transform.Find("Music Settings").transform.Find("Volume").gameObject.GetComponent<Slider>();
         if (SceneManager.GetActiveScene().name == "StartScene") {
             difficulty = GameObject.Find("Pause Menu").transform.Find("Difficulty").transform.GetComponentInChildren<Dropdown>();
         }
+        quit = GameObject.Find("Pause Menu").transform.Find("QuitButton").gameObject.GetComponent<Button>();
+        quit.onClick.AddListener(quitGame);
     }
 
-
+    void quitGame() {
+        Application.Quit();
+    }
     void setDifficulty(string diff) {
         GameManager.difficult = diff;
     }

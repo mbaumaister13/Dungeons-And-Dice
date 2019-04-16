@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -67,13 +68,17 @@ public class Player : MonoBehaviour
                 playerCamera.transform.LookAt(transform);
                 playerCamera.transform.Translate(Vector3.right * Time.deltaTime);
             }
-            if(board.tiles[currentTile+1].hasVisited){
-                currentTile++;
-                spacesToMove--;
-                if(spacesToMove==0){
-                    dice.Reset();
-                    animator.SetInteger("animation",13);
+            try {
+                if(board.tiles[currentTile+1].hasVisited){
+                    currentTile++;
+                    spacesToMove--;
+                    if(spacesToMove==0){
+                        dice.Reset();
+                        animator.SetInteger("animation",13);
+                    }
                 }
+            } catch (Exception e) {
+                Debug.Log("End tile shit gang");
             }
         }
     }

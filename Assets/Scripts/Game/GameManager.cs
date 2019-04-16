@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -12,6 +14,7 @@ public class GameManager : MonoBehaviour
     public UIManager UI;
     public VendorManager vendor;
     public MeterManager meterManager;
+    protected TextMeshProUGUI winText;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +22,11 @@ public class GameManager : MonoBehaviour
         if(vendor!=null){
             vendor.GetComponentInChildren<Canvas>().enabled = false;
         }
+        if (meterManager != null) {
+            winText = meterManager.transform.Find("PlayerMeters").transform.Find("WinText").gameObject.GetComponent<TextMeshProUGUI>();
+            winText.enabled = false; 
+        }
+        
     }
     public static IEnumerator unloadScene(){
         yield return new WaitForEndOfFrame();
