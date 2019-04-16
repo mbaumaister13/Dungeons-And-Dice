@@ -10,7 +10,7 @@ public class Skeleton : Enemy
     void Start()
     {
         hp = 50f;
-        damage = 15;
+        damage = 150;
         attackSpeed = 3f;
     }
 

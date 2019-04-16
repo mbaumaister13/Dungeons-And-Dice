@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using Panda;
 public class Ghoul : Enemy
 {
@@ -21,7 +19,8 @@ public class Ghoul : Enemy
 
     [Task]
     public void Swoop(){
-
+        rb.velocity = Vector2.MoveTowards(transform.position, player.transform.position, Time.deltaTime * moveSpeed);
+        Task.current.Succeed();
     }
     [Task]
     public override void attack(){

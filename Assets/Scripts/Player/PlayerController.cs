@@ -49,9 +49,9 @@ public class PlayerController : Player
         if(Time.time - invincibilityTimer >= invincibilityTime){
             isInvincible = false;
         }
-        if(hp<=0){
-            Respawn();
-        }
+        //if(hp<=0){
+        //    Respawn();
+        //}
     }
     // Update is called once per frame
     void FixedUpdate()
@@ -91,14 +91,14 @@ public class PlayerController : Player
             invincibilityTimer = Time.time;
             isInvincible = true;
             Debug.Log(rb.velocity);
-            Vector2 knockback = new Vector2(-rb.velocity.x,jumpForce/2);
-            rb.AddForce(knockback);
+            Vector2 knockback = new Vector2(-rb.velocity.x,-rb.velocity.y+2);
+            rb.AddForce(knockback,ForceMode2D.Impulse);
             Debug.Log(rb.velocity);            
             Debug.Log("Player took "+damage+" damage!");
         }
     }
-    void Respawn(){
-        GameManager.unloadScene();
-        PlayerManager.instance.respawnPlayer();
-    }
+    //void Respawn(){
+    //    StartCoroutine(GameManager.unloadScene());
+    //    PlayerManager.instance.respawnPlayer();
+    //}
 }

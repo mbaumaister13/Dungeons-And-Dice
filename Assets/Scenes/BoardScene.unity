@@ -499,6 +499,9 @@ MonoBehaviour:
   boardMoveSpeed: 5
   attackSpeed: 1
   attackTimer: 1
+  invincibilityTimer: 0
+  invincibilityTime: 2
+  isInvincible: 0
   hp: 100
   gold: 0
   damage: 10
@@ -3395,18 +3398,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
-    - target: {fileID: 368213473, guid: 41f81f58efa263b4bb09c90f75741b6f, type: 3}
-      propertyPath: UI
-      value: 
-      objectReference: {fileID: 2044735506}
-    - target: {fileID: 368213473, guid: 41f81f58efa263b4bb09c90f75741b6f, type: 3}
-      propertyPath: meterManager
-      value: 
-      objectReference: {fileID: 1271326702}
-    - target: {fileID: 368213473, guid: 41f81f58efa263b4bb09c90f75741b6f, type: 3}
-      propertyPath: vendor
-      value: 
-      objectReference: {fileID: 7055839251190050175}
     - target: {fileID: 3569451040886061028, guid: 41f81f58efa263b4bb09c90f75741b6f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3467,6 +3458,18 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 426402901}
+    - target: {fileID: 368213473, guid: 41f81f58efa263b4bb09c90f75741b6f, type: 3}
+      propertyPath: UI
+      value: 
+      objectReference: {fileID: 2044735506}
+    - target: {fileID: 368213473, guid: 41f81f58efa263b4bb09c90f75741b6f, type: 3}
+      propertyPath: meterManager
+      value: 
+      objectReference: {fileID: 1271326702}
+    - target: {fileID: 368213473, guid: 41f81f58efa263b4bb09c90f75741b6f, type: 3}
+      propertyPath: vendor
+      value: 
+      objectReference: {fileID: 7055839251190050175}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41f81f58efa263b4bb09c90f75741b6f, type: 3}
 --- !u!114 &1675050064 stripped
@@ -3763,7 +3766,7 @@ PrefabInstance:
     - target: {fileID: 1671834074743919772, guid: 5288f2a117dc5cb43a4c9d095888b43d,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6457143292322806611, guid: 5288f2a117dc5cb43a4c9d095888b43d,
         type: 3}

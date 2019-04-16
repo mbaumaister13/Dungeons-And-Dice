@@ -12,7 +12,8 @@ public class Player : MonoBehaviour
     Vector3 initialCamPosition;
     Board board;
     public float boardMoveSpeed;
-    public float attackSpeed = 1f, attackTimer = 1f, invincibilityTimer = 0f,invincibilityTime = 2f; 
+    public float attackSpeed = 1f, attackTimer = 1f;
+    public float invincibilityTimer = 0f, invincibilityTime = 0.3f; 
     public bool isInvincible = false;
     public int hp = 100, gold = 0, damage = 10;
     public float strength = 1.0f;
@@ -35,7 +36,7 @@ public class Player : MonoBehaviour
         animator = GetComponent<Animator>();
         animator.SetInteger("animation",13);
         board = GameObject.Find("Board").GetComponent<Board>();
-        PlayerManager.instance.savedPlayer = PlayerManager.instance.player;
+        //PlayerManager.instance.savePlayer(PlayerManager.instance.player.GetComponent<Player>());
     }
     void Update()
     {
