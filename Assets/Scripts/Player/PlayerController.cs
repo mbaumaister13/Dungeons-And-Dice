@@ -21,6 +21,8 @@ public class PlayerController : Player
     void Awake()
     {
         PlayerManager.instance.player = gameObject;
+        hp = GameManager.hp;
+        gold = GameManager.gold;
         sr = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();

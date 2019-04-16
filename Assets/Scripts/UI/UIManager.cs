@@ -29,7 +29,7 @@ public class UIManager : MonoBehaviour
     }
     void Update() {
         if (Input.GetKeyDown("escape")) {
-            GameManager.pause();
+            GameManager.pauseGame();
         }
         if(difficulty!=null){
            setDifficulty(difficulty.captionText.text);

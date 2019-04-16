@@ -1,5 +1,8 @@
 tree("Root")
-	sequence
-		canSeePlayer
-		approachPlayer
-		attack
+	while
+		not isDamaged
+		sequence
+			canSeePlayer
+			race
+				wander
+				attack

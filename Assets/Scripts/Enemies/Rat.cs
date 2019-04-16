@@ -54,8 +54,6 @@ public class Rat : Enemy
             attack();
             canAttack = false;
             Debug.Log("Player has lost "+gold+" gold!");
-        }
-        if(gold > 0){
             Task.current.Succeed();
         }
         else{

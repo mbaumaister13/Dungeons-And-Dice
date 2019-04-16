@@ -253,6 +253,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6042428527275884879, guid: 001685e367200de45b0b24c4a13f69c2,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6042428527275884879, guid: 001685e367200de45b0b24c4a13f69c2,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8
+      objectReference: {fileID: 0}
     - target: {fileID: 646424828366159655, guid: 001685e367200de45b0b24c4a13f69c2,
         type: 3}
       propertyPath: m_Layer
@@ -1070,6 +1080,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 343867212910033573, guid: 5bfacf51cc66a4e488c05b8a02a7980c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Weapon
+      objectReference: {fileID: 0}
     - target: {fileID: 143275578834829272, guid: 5bfacf51cc66a4e488c05b8a02a7980c,
         type: 3}
       propertyPath: m_Enabled
@@ -1320,6 +1335,11 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 565811734570201666, guid: 377f4f2d64776494db9e6e700e81ed7a,
+        type: 3}
+      propertyPath: m_Mass
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8429021818047880178, guid: 377f4f2d64776494db9e6e700e81ed7a,
         type: 3}
       propertyPath: moveSpeed
@@ -1547,7 +1567,7 @@ PrefabInstance:
     - target: {fileID: 5792443756844450459, guid: 9aec0d35f264009449f0d6a87ab8928f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.08
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5792443756844450459, guid: 9aec0d35f264009449f0d6a87ab8928f,
         type: 3}
@@ -2068,6 +2088,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 0fb5585f6ff9874448bbe53a1909bdac,
         type: 3}
+    - target: {fileID: 1769646295, guid: 9aec0d35f264009449f0d6a87ab8928f, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9109154232378692292, guid: 9aec0d35f264009449f0d6a87ab8928f,
         type: 3}
       propertyPath: m_TagString

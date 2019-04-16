@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public static VendorManager vendor;
     public static MeterManager meterManager;
     protected TextMeshProUGUI winText;
+    public static int gold,hp;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,8 +40,17 @@ public class GameManager : MonoBehaviour
         }
     }
 
-
-    public static void pause() {
+    public static void pauseGame() {
+        if (UI.GetComponentInChildren<Canvas>().enabled) {
+            UI.GetComponentInChildren<Canvas>().enabled = false;
+            Time.timeScale = 1.0f;
+        }
+        else {
+            UI.GetComponentInChildren<Canvas>().enabled = true;
+            Time.timeScale = 0.0f;
+        }
+    }
+    public void pause() {
         if (UI.GetComponentInChildren<Canvas>().enabled) {
             UI.GetComponentInChildren<Canvas>().enabled = false;
             Time.timeScale = 1.0f;
