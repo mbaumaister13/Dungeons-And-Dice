@@ -1,3 +1,5 @@
 tree("Root")
-	canSeePlayer
-	attack
+	sequence
+		canSeePlayer
+		approachPlayer
+		attack

@@ -6,7 +6,7 @@ using Panda;
 public class FireGhoul : Enemy
 {
     public GameObject projectile;
-    private List<Object> fireballs = new List<Object>();
+    bool enraged = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,15 +17,24 @@ public class FireGhoul : Enemy
     public override void Update() {
         base.Update();
         animator.SetFloat("hp", hp);
-
+        if (hp <= 50f) {
+            enraged = true;
+            attackSpeed = .5f;
+        }
     }
-
+    [Task]
+    public void approachPlayer() {
+        rb.position = Vector2.MoveTowards(transform.position,new Vector2(player.transform.position.x - transform.position.x, 0),Time.deltaTime*moveSpeed);
+        Task.current.Succeed();
+    }
     [Task]
     public override void attack() {
-        if(Time.time)
-        GameObject fireball = Instantiate(projectile,transform);
-        fireball.GetComponent<Rigidbody2D>().AddForce((player.transform.position - transform.position)*10);
-        fireballs.Add(fireball);
+        if (Time.time - attackTimer >= attackSpeed) {
+            GameObject fireball = Instantiate(projectile, transform.position,transform.rotation);
+            fireball.GetComponent<Rigidbody2D>().AddForce((player.transform.position - transform.position) * 30);
+            attackTimer = Time.time;
+        }
+        Task.current.Succeed();
     }
 
 

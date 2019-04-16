@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : Player
 {
@@ -49,9 +50,9 @@ public class PlayerController : Player
         if(Time.time - invincibilityTimer >= invincibilityTime){
             isInvincible = false;
         }
-        //if(hp<=0){
-        //    Respawn();
-        //}
+        if (hp <= 0) {
+            SceneManager.LoadScene(1);
+        }
     }
     // Update is called once per frame
     void FixedUpdate()

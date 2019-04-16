@@ -117,8 +117,8 @@ MonoBehaviour:
   damage: 0
   hp: 0
   moveSpeed: 0
-  animator: {fileID: 0}
-  fireball: {fileID: 599397668917292335, guid: 72cd7036d56208e48b9eeb1716f82ebb, type: 3}
+  projectile: {fileID: 6525593389335447083, guid: 72cd7036d56208e48b9eeb1716f82ebb,
+    type: 3}
 --- !u!50 &565811734570201666
 Rigidbody2D:
   serializedVersion: 4

@@ -5,14 +5,14 @@ using UnityEngine;
 public class Fireball : MonoBehaviour
 {
     // Start is called before the first frame update
-    Enemy enemy;
+    FireGhoul enemy;
     Animator animator;
     Rigidbody2D rb;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        enemy = GetComponentInParent<Enemy>();
+        enemy = GameObject.Find("Fire Ghoul").GetComponent<FireGhoul>();
     }
 
     // Update is called once per frame
@@ -23,9 +23,9 @@ public class Fireball : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision) {
         if(collision.tag == "Player") {
             PlayerManager.instance.player.GetComponent<PlayerController>().takeDamage(enemy.damage);
+            rb.velocity = Vector2.zero;
+            animator.SetTrigger("explode");
+            Destroy(gameObject, 1f);
         }
-        animator.SetTrigger("destroyed");
-        rb.velocity = Vector2.zero;
-        Destroy(gameObject, 1f);
     }
 }

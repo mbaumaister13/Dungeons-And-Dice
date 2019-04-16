@@ -519,6 +519,34 @@ PrefabInstance:
     - {fileID: 8550310960662416506, guid: 33bb35f43b92ece4db68ce9390fa4c54, type: 3}
     - {fileID: 8550310960699084458, guid: 33bb35f43b92ece4db68ce9390fa4c54, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 33bb35f43b92ece4db68ce9390fa4c54, type: 3}
+--- !u!1 &214646444 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 565811734570201664, guid: 377f4f2d64776494db9e6e700e81ed7a,
+    type: 3}
+  m_PrefabInstance: {fileID: 565811734490041580}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &214646451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 214646444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17e43e7170fb45b4b81dcd16d0ff55d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scripts:
+  - {fileID: 4900000, guid: 0efd4202ec0ef4643ab9658eb852b3ba, type: 3}
+  autoReset: 1
+  tickOn: 0
+  sourceInfos:
+  - isFoldout: 1
+    breakPoints: 
+    breakPointStatuses: 
+    collapsedLines: 
+    btScript: 
 --- !u!1001 &226872436
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2881,6 +2909,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire Ghoul
       objectReference: {fileID: 0}
+    - target: {fileID: 565811734570201664, guid: 377f4f2d64776494db9e6e700e81ed7a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 565811734570201693, guid: 377f4f2d64776494db9e6e700e81ed7a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2935,6 +2968,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 565811734570201692, guid: 377f4f2d64776494db9e6e700e81ed7a,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 565811734570201666, guid: 377f4f2d64776494db9e6e700e81ed7a,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8429021818047880178, guid: 377f4f2d64776494db9e6e700e81ed7a,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 377f4f2d64776494db9e6e700e81ed7a, type: 3}
