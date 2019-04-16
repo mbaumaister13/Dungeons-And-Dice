@@ -22,6 +22,7 @@ public class Rat : Enemy
     // Update is called once per frame
     public override void Update()
     {
+        base.Update();
         if(hp<=0){
             player.gold+=gold;
             Debug.Log("Rat died");
@@ -32,13 +33,6 @@ public class Rat : Enemy
         }
         else{
             sr.flipX = false;
-        }
-        if (hp <= 0) {
-            Debug.Log("died");
-            Destroy(gameObject, 1f);
-        }
-        if (Time.time - invincibilityTimer >= invicibilityTime && damaged) {
-            damaged = false;
         }
     }
     [Task]

@@ -7,13 +7,13 @@ public class Enemy : MonoBehaviour
     protected PlayerController player;
     //string name;
     protected Rigidbody2D rb;
-    protected int damage;
+    public int damage;
     public float hp;
     public float moveSpeed;
     protected bool canAttack;
     protected float attackSpeed;
     protected float attackTimer;
-    public Animator animator;
+    protected Animator animator;
     protected bool damaged = false;
     protected float invicibilityTime = 1f, invincibilityTimer = 0f;
     // Start is called before the first frame update
