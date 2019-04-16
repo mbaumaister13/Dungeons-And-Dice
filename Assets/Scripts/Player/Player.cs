@@ -24,6 +24,7 @@ public class Player : MonoBehaviour
     private Animator animator;
     bool isIdle;
     public MeterManager meterManager;
+    public int dungeonCount = 0;
     TextMeshProUGUI HealthText, StrengthText, GoldText;
 
     // Update is called once per frame
