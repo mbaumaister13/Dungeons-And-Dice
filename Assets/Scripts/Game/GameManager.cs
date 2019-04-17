@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     public static UIManager UI;
     public static VendorManager vendor;
     public static MeterManager meterManager;
-    protected TextMeshProUGUI winText;
+    public static TextMeshProUGUI winText;
     public static int gold,hp;
     // Start is called before the first frame update
     void Start()

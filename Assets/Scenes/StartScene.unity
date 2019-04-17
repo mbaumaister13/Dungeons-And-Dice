@@ -1234,6 +1234,20 @@ PrefabInstance:
       propertyPath: m_Text
       value: Enable Tooltips?
       objectReference: {fileID: 0}
+    - target: {fileID: 2061441247, guid: 68746eb98cb5ffd4fa64129cc6301258, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2112391569262690670, guid: 68746eb98cb5ffd4fa64129cc6301258,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4486860756605039099, guid: 68746eb98cb5ffd4fa64129cc6301258,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68746eb98cb5ffd4fa64129cc6301258, type: 3}
 --- !u!114 &643773846 stripped
@@ -1951,6 +1965,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 368213473, guid: 41f81f58efa263b4bb09c90f75741b6f, type: 3}
+      propertyPath: UI
+      value: 
+      objectReference: {fileID: 943636842}
+    - target: {fileID: 368213473, guid: 41f81f58efa263b4bb09c90f75741b6f, type: 3}
+      propertyPath: meterManager
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 368213473, guid: 41f81f58efa263b4bb09c90f75741b6f, type: 3}
+      propertyPath: vendor
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3569451040886061028, guid: 41f81f58efa263b4bb09c90f75741b6f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2009,18 +2035,6 @@ PrefabInstance:
     - target: {fileID: 8634912773164331146, guid: 41f81f58efa263b4bb09c90f75741b6f,
         type: 3}
       propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 368213473, guid: 41f81f58efa263b4bb09c90f75741b6f, type: 3}
-      propertyPath: UI
-      value: 
-      objectReference: {fileID: 943636842}
-    - target: {fileID: 368213473, guid: 41f81f58efa263b4bb09c90f75741b6f, type: 3}
-      propertyPath: meterManager
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 368213473, guid: 41f81f58efa263b4bb09c90f75741b6f, type: 3}
-      propertyPath: vendor
       value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []

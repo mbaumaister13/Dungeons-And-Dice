@@ -83,6 +83,7 @@ public class Player : MonoBehaviour
                     }
                 }
             } catch (Exception e) {
+                GameManager.winText.enabled = true;
                 Debug.Log("End tile shit gang");
             }
         }
